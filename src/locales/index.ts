@@ -1,27 +1,27 @@
-import { createI18n } from 'vue-i18n'
+import { createI18n } from 'vue-i18n';
 
-import en from './en'
-import pl from './pl'
+import en from './en';
+import pl from './pl';
 
-export const SUPPORTED_LOCALES = ['en', 'pl'] as const
-export type Locale = (typeof SUPPORTED_LOCALES)[number]
+export const SUPPORTED_LOCALES = ['en', 'pl'] as const;
+export type Locale = (typeof SUPPORTED_LOCALES)[number];
 
-const STORAGE_KEY = 'locale'
+const STORAGE_KEY = 'locale';
 
 function detectLocale(): Locale {
-  const stored = localStorage.getItem(STORAGE_KEY)
-  const supported = (SUPPORTED_LOCALES as readonly string[])
+  const stored = localStorage.getItem(STORAGE_KEY);
+  const supported = (SUPPORTED_LOCALES as readonly string[]);
 
   if (stored && supported.includes(stored)) {
-    return stored as Locale
+    return stored as Locale;
   }
 
   // Get 'en' from 'en-US' etc.
-  const browserLang = navigator.language.split('-')[0]
+  const browserLang = navigator.language.split('-')[0];
 
   return supported.includes(browserLang)
     ? (browserLang as Locale)
-    : 'en'
+    : 'en';
 }
 
 export const i18n = createI18n({
@@ -29,4 +29,4 @@ export const i18n = createI18n({
   locale: detectLocale(),
   fallbackLocale: 'en',
   messages: { en, pl }
-})
+});

@@ -5,4 +5,4 @@ export default {
     teams: 'Zespoły',
     news: 'Aktualności'
   }
-}
+};
