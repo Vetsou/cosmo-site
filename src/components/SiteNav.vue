@@ -5,10 +5,10 @@
 <template>
   <header>
     <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/projects">Projects</RouterLink>
-      <RouterLink to="/teams">Teams</RouterLink>
-      <RouterLink to="/news">News</RouterLink>
+      <RouterLink to="/">{{ $t('nav.home') }}</RouterLink>
+      <RouterLink to="/projects">{{ $t('nav.projects') }}</RouterLink>
+      <RouterLink to="/teams">{{ $t('nav.teams') }}</RouterLink>
+      <RouterLink to="/news">{{ $t('nav.news') }}</RouterLink>
     </nav>
   </header>
 </template>
