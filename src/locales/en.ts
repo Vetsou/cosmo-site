@@ -4,5 +4,5 @@ export default {
     projects: 'Projects',
     teams: 'Teams',
     news: 'News',
-  }
+  },
 };

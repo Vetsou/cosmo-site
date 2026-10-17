@@ -11,7 +11,7 @@ const routes = [
   { path: '/teams', component: TeamsView },
   { path: '/news', component: NewsView },
 
-  { path: '/:pathMatch(.*)*', component: () => import('./views/error/NotFoundView.vue') }
+  { path: '/:pathMatch(.*)*', component: () => import('./views/error/NotFoundView.vue') },
 ];
 
 const router = createRouter({

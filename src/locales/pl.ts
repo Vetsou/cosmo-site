@@ -3,6 +3,6 @@ export default {
     home: 'Strona główna',
     projects: 'Projekty',
     teams: 'Zespoły',
-    news: 'Aktualności'
-  }
+    news: 'Aktualności',
+  },
 };

@@ -28,5 +28,5 @@ export const i18n = createI18n({
   globalInjection: true,
   locale: detectLocale(),
   fallbackLocale: 'en',
-  messages: { en, pl }
+  messages: { en, pl },
 });
