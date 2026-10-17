@@ -1,4 +1,5 @@
 import { createI18n } from 'vue-i18n';
+import { watch, watchEffect } from 'vue';
 
 import en from './en';
 import pl from './pl';
@@ -25,8 +26,16 @@ function detectLocale(): Locale {
 }
 
 export const i18n = createI18n({
+  legacy: false,
   globalInjection: true,
   locale: detectLocale(),
   fallbackLocale: 'en',
   messages: { en, pl },
+});
+
+const { locale } = i18n.global;
+
+watch(locale, l => localStorage.setItem(STORAGE_KEY, l));
+watchEffect(() => {
+  document.documentElement.lang = locale.value;
 });

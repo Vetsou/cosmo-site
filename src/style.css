@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@layer components {
+  .nav-link {
+    @apply relative text-white/80 transition-colors hover:text-white;
+    @apply after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full;
+    @apply after:origin-left after:scale-x-0 after:bg-current;
+    @apply after:transition-transform after:duration-300;
+    @apply hover:after:scale-x-100;
+  }
+}
