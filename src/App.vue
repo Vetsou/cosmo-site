@@ -4,7 +4,7 @@ import SiteNav from './components/SiteNav.vue';
 
 <template>
   <SiteNav />
-  <main>
+  <main class="main-container">
     <router-view />
   </main>
 </template>
