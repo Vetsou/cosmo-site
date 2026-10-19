@@ -4,10 +4,7 @@ import LocaleSwitcher from './LocaleSwitcher.vue';
 </script>
 
 <template>
-  <header
-    class="flex sticky top-0 z-999 p-3
-      bg-[#00000026] items-center justify-between"
-  >
+  <header class="flex relative z-10 p-3 bg-[#00000026] items-center justify-between">
     <div class="h-8">
       <RouterLink to="/">
         <img
